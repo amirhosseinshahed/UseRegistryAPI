@@ -3,11 +3,12 @@ package com.UseRegistryAPI.repository;
 import com.UseRegistryAPI.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.stereotype.Repository;
 
 import javax.swing.text.html.parser.Entity;
 import java.util.List;
 import java.util.Optional;
-
+@Repository
 public class UserInfoRepository {
     @PersistenceContext
     private EntityManager entityManager;
