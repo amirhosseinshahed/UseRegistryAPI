@@ -3,12 +3,18 @@ package com.UseRegistryAPI.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
+import lombok.*;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(
         name = "uk_app_user_username",
         columnNames = "username"
 ))
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
