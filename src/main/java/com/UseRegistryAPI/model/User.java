@@ -6,7 +6,8 @@ import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(
+@Table(name = "App_user",
+        uniqueConstraints = @UniqueConstraint(
         name = "uk_app_user_username",
         columnNames = "username"
 ))
